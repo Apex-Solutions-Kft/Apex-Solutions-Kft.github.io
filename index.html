@@ -27,6 +27,12 @@
   <script src="js/vendor/jquery.hashchange.min.js"></script>
   <script src="js/vendor/jquery.easytabs.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("demo-form").submit();
+    }
+  </script>
 
 </head>
 
@@ -164,6 +170,10 @@
                       <p>
                         Email Address
                       </p>
+                      <button class="g-recaptcha"
+                              data-sitekey="6LcNFbcbAAAAAF4ImXLGK8O122XwgoL9D0kxl9Bk"
+                              data-callback='onSubmit'
+                              data-action='submit'>Submit</button>
                     </div>
                   </div>
                 </div>
